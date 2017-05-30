@@ -46,7 +46,7 @@
 
 	<!-- Top section -->
 	<div class="top fullscreen background parallax" id="top" style="background-image:url('images/background.jpg');" data-img-width="1920"
-		data-img-height="1080" data-diff="250">
+	    data-img-height="1080" data-diff="250">
 		<div class="content-a">
 			<div class="overlay"></div>
 			<div class="content-b">
@@ -67,7 +67,7 @@
 				<!-- Toggle icon for responsive design -->
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-						aria-controls="navbar">
+					    aria-controls="navbar">
             			<span class="sr-only">Toggle navigation</span>
             			<span class="icon-bar"></span>
             			<span class="icon-bar"></span>
@@ -136,7 +136,7 @@
 
 	<!-- Number counter section -->
 	<section class="not-fullscreen background parallax counter" id="counter" style="background-image:url('images/counter-bg.jpg');"
-		data-img-width="1600" data-img-height="1064" data-diff="500">
+	    data-img-width="1600" data-img-height="1064" data-diff="500">
 		<div class="content-a">
 			<div class="content-b">
 				<div class="overlay"></div>
@@ -150,11 +150,11 @@
 						<span class="white counter-text">players joined in total</span>
 					</div>
 					<div class="col-xs-3">
-						<span class="counter-number white">6</span>
-						<span class="white counter-text">months online</span>
+						<span class="counter-number white">{{startDate}}</span>
+						<span class="white counter-text">years online</span>
 					</div>
 					<div class="col-xs-3">
-						<span class="counter-number white">6</span>
+						<span class="counter-number white">{{memberCount}}</span>
 						<span class="white counter-text">great members</span>
 					</div>
 				</div>
@@ -171,29 +171,9 @@
 					<div class="hr-dot"></div>
 				</div>
 			</div>
-			<div class="col-md-4">
-				<img src="https://crafatar.com/avatars/e06c96ae-f160-4845-a46a-7e8e3a80ca49" alt="SirFilios">
-				<h4 class="bold">SirFilios</h4>
-			</div>
-			<div class="col-md-4">
-				<img src="https://crafatar.com/avatars/4d09a6b4-312d-4b36-a32f-250f01a35c0c" alt="Time_Explorer">
-				<h4 class="bold">Time_Explorer</h4>
-			</div>
-			<div class="col-md-4">
-				<img src="https://crafatar.com/avatars/77491ae7-de13-4a57-9145-b15bed6b9234" alt="Black_Steel">
-				<h4 class="bold">Black_Steel</h4>
-			</div>
-			<div class="col-md-4">
-				<img src="https://crafatar.com/avatars/8884bd7c-3584-4958-a88e-75e1d3612c86" alt="RavewnClaw">
-				<h4 class="bold">RavewnClaw</h4>
-			</div>
-			<div class="col-md-4">
-				<img src="https://crafatar.com/avatars/3b1a973b-d08c-4f46-9c7f-c2d1ea25ab8b" alt="Black_WolfKnight">
-				<h4 class="bold">Black_WolfKnight</h4>
-			</div>
-			<div class="col-md-4">
-				<img src="https://crafatar.com/avatars/dfe6fe75-ac80-4acf-98b0-79de6fce3f31" alt="OnceUponABlock">
-				<h4 class="bold">OnceUponABlock</h4>
+			<div class="col-md-4" ng-repeat="member in members">
+				<img ng-src="https://crafatar.com/avatars/{{member.uuid}}" alt="SirFilios">
+				<h4 class="bold">{{member.name}}</h4>
 			</div>
 		</div>
 	</section>
@@ -208,8 +188,10 @@
 				</div>
 			</div>
 		</div>
-		<iframe class="" height="500" width="100%" src="https://map.hexagonminecraft.com" frameborder="0" scrolling="no" marginheight="0"
-			marginwidth="0"></iframe>
+		<div class="maps" onclick="document.getElementById('iframe').style.pointerEvents= 'auto'">
+			<iframe class="" height="500" width="100%" src="https://map.hexagonminecraft.com" frameborder="0" scrolling="no" marginheight="0"
+			    marginwidth="0"></iframe>
+		</div>
 	</section>
 
 	<!-- Bottom section -->
@@ -246,6 +228,10 @@
 
 	<!-- Angular JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+	<!-- Momment.js JavaScript-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js" integrity="sha256-1hjUhpc44NwiNg8OwMu2QzJXhD8kcj+sJA3aCQZoUjg="
+	    crossorigin="anonymous"></script>
 
 	<!-- Custom JavaScript -->
 	<script src="js/main.js"></script>

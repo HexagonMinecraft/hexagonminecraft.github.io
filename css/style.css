@@ -1,4 +1,4 @@
-/* 
+/*
 Theme name: Minecraft OnePage website template
 Theme URI: http://ivizadesigns.com/demo/onepage/
 Author: Iviza Designs
@@ -106,6 +106,10 @@ img {
 	width: 100%;
 }
 
+.maps iframe{
+    pointer-events: none;
+}
+
 .container {
 	width: 100%;
 	max-width: 1240px;
@@ -116,9 +120,9 @@ img {
 	color: #fff;
 }
 
-.dark h1, .dark h2, 
-.dark h3, .dark h4, 
-.dark h5, .dark h6, 
+.dark h1, .dark h2,
+.dark h3, .dark h4,
+.dark h5, .dark h6,
 .dark p, .dark a {
 	color: #fff;
 }
