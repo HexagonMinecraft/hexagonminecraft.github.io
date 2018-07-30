@@ -8,3 +8,4 @@ Official Hexagon MC Server Website
 2.  Clone the repo `git clone https://github.com/HexagonMinecraft/HexagonMinecraft/website.git`
 3.  Change directory `cd website`
 4.  Start development! `code .`
+5.  Start dev server `npm run dev`
