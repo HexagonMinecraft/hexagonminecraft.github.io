@@ -1,5 +1,5 @@
 {
-	"name": "hexagonminecraft.github.io",
+	"name": "hmc-website",
 	"version": "1.0.0",
 	"description": "Official Hexagon MC Server Website",
 	"main": "index.js",
@@ -23,7 +23,7 @@
 		"build": "parcel build src/index.html",
 		"dev": "parcel src/index.html"
 	},
-	"repository": "hexagonminecraft/hexagonminecraft.github.io",
+	"repository": "HexagonMinecraft/website",
 	"keywords": [
 		"minecraft"
 	],
