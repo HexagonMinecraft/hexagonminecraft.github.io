@@ -1,0 +1,32 @@
+{
+	"name": "hexagonminecraft.github.io",
+	"version": "1.0.0",
+	"description": "Official Hexagon MC Server Website",
+	"main": "index.js",
+	"dependencies": {
+		"angular": "^1.7.2",
+		"bootstrap": "^3.3.7",
+		"jquery": "^2.2.4",
+		"moment": "^2.22.2"
+	},
+	"devDependencies": {
+		"eslint": "^5.2.0",
+		"eslint-config-standard": "^11.0.0",
+		"eslint-plugin-import": "^2.13.0",
+		"eslint-plugin-node": "^7.0.1",
+		"eslint-plugin-promise": "^3.8.0",
+		"eslint-plugin-standard": "^3.1.0",
+		"parcel-bundler": "^1.9.7"
+	},
+	"scripts": {
+		"test": "eslint src/ || true",
+		"build": "parcel build src/index.html",
+		"dev": "parcel src/index.html"
+	},
+	"repository": "hexagonminecraft/hexagonminecraft.github.io",
+	"keywords": [
+		"minecraft"
+	],
+	"author": "Noah Prail <noah@prail.net>",
+	"license": "MIT"
+}
