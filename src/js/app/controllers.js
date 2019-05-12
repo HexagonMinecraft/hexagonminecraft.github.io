@@ -18,11 +18,11 @@ const appCtrl = angular
     }
 
     $http
-      .get('https://mcapi.ca/query/play.hexagonminecraft.com/info')
+      .get('https://mcapi.us/server/status?ip=play.hexagonminecraft.com')
       .then(response => {
         $scope.status = response.data
 
-        if ($scope.status.status) {
+        if ($scope.status.online) {
           $scope.isOnline = 'Online'
           $scope.onlineColor = {
             color: 'green'
@@ -41,7 +41,7 @@ const appCtrl = angular
         $scope.onlineColor = {
           color: 'red'
         }
-        $scope.status.players.online = '0'
+        $scope.status.players.now = '0'
         $scope.done = true
         console.log(err)
       })
