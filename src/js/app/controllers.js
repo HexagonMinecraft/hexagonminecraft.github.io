@@ -18,7 +18,7 @@ const appCtrl = angular
     }
 
     $http
-      .get('https://mcapi.us/server/status?ip=play.hexagonminecraft.com')
+      .get('https://mcapi.us/server/status?ip=play.ravewncorp.xyz')
       .then(response => {
         $scope.status = response.data
 
