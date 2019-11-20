@@ -4,7 +4,7 @@
 	"description": "Official Hexagon MC Server Website",
 	"main": "index.js",
 	"dependencies": {
-		"angular": "^1.7.2",
+		"angular": "^1.7.9",
 		"bootstrap": "^3.3.7",
 		"jquery": "^2.2.4",
 		"moment": "^2.22.2"
